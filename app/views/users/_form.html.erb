@@ -1,0 +1,78 @@
+
+  <%= form_for(@user) do |f| %>
+    <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohíben a este usuario ser guardado:</h2>
+
+      <ul>
+        <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p id="notice"><%= notice %></p>
+
+  <div class="row">
+    <form>
+      <div class="datos col-lg-6 col-xs-6">
+        <div class="form-group">
+            <div class="field">
+              <%= f.label :nombre %><br>
+              <%= f.text_field :name, class: "form-control col-lg-12 col-md-12", type: "text", placeholder: "Nombre a mostrar" %>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="field">
+              <label for="exampleInputEmail3">Correo Electrónico</label>
+              <%= f.text_field :email, class: "form-control col-lg-12 col-md-12", type: "text", placeholder: "correo@ejemplo.com" %>
+            </div>
+        </div>
+
+        <div class="form-group">
+          <div class="field">
+              <label for="exampleInputEmail3">Biografía</label>
+            <%= f.text_area :bio, class: "form-control col-lg-12 col-md-12", rows: "3" %>
+          </div>
+        </div>
+        <div class="field" id="#upload_image">
+          <br>
+          <%= f.label :avatar %>
+          <%= f.file_field :avatar, value: "Examinar" %>
+        </div>
+      </div>
+      <div class="social col-lg-6 col-xs-6">
+        <div class="form-group">
+          <label for="exampleInputAmount">Twitter</label>
+          <div class="input-group">
+            <div class="input-group-addon">@</div>
+              <%= f.text_field :twuser, class: "form-control", type: "text", placeholder: "Usuario" %>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputAmount">Github</label>
+          <div class="input-group">
+            <div class="input-group-addon">@</div>
+              <%= f.text_field :ghuser, class: "form-control", type: "text", placeholder: "Usuario" %>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputAmount">Google +</label>
+          <div class="input-group">
+            <div class="input-group-addon">@</div>
+              <%= f.text_field :guser, class: "form-control", type: "text", placeholder: "Usuario" %>
+          </div>
+        </div>
+        <div class="actions">
+          <%= f.submit 'Acceder', class: "btn btn-primary form-inline" %> 
+        </div>
+      </div>      
+
+    </form>
+  </div>
+
+<% end %>
+
+
+

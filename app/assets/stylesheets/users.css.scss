@@ -1,0 +1,98 @@
+html {
+	height: 100%;
+	width: 100%;
+	background: black;
+}
+
+.background {
+	background: url(../assets/header.jpg) no-repeat bottom center scroll;
+	height: 100vh;
+	width: 100%;
+	margin-top: 0px;
+	position: absolute;
+	align-content: center;
+}
+
+.show {
+	margin: 75px 25% 2% 25%;
+	padding: 2% 4%;
+	border-radius: 10px;
+	background-color: rgba(300, 300, 300, 0.7);
+	float: center;
+
+	.datos {
+		display: block;
+
+		.form-group {
+			.form-control {			
+			}
+		}
+
+		#upload_image {
+		    background-color: #2c3e50;
+		    background-image: none;
+		    border: none;
+		    color: #FFF;
+		    padding: 5px 10px 5px 10px;
+		}
+
+		textarea.form-control {
+			resize: none;
+			height: 100px;
+		}
+	}
+
+	.social {
+		.form-control {
+			margin-right: 5%;
+		}
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		color: rgba(0, 0, 0, 0.7);
+		margin: 1%;
+		text-align: center;
+		align-content: center;
+	}
+
+	p {
+		color: rgba(0, 0, 0, 0.7);
+		text-align: center;
+		align-content: center;
+	}
+
+	.actions {
+		margin-top: 25px;
+	}
+
+}
+
+@media screen and (max-width: 950px) {
+	.show {
+		margin: 75px 20% 2% 20%;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.show {
+		margin: 75px 15% 2% 15%;
+	}
+}
+
+@media screen and (max-width: 650px) {
+	.show {
+		margin: 75px 10% 2% 10%;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.show {
+		margin: 75px 5% 2% 5%;
+	}
+}
+
+@media screen and (max-width: 350px) {
+	.show {
+		margin: 75px 0% 2% 0%;
+	}
+}

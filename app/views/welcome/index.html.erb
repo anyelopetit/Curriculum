@@ -1,0 +1,70 @@
+<div class="index">
+  <!-- Navigation -->
+    <!-- Intro Header -->
+    <header class="intro">
+      <div class="intro-body">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h1 class="brand-heading">Currículum</h1>
+                <p class="intro-text">"Measuring programming progress by lines of code is like measuring aircraft building progress by weight".<br> - Bill Gates.</p>
+                <a href="/#about" class="btn btn-circle page-scroll">
+                  <i class="fa fa-angle-double-down animated"></i>
+                </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="container content-section text-center">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <%= image_tag(@user.avatar, class: "avatar img-circle")%>
+            <h2>Sobre mí</h2>
+            <% if @user != nil %>
+              <%= @user.bio %>
+            <% else %>
+              <p> Nacido en Julio de 1996, Técnico Medio en Servicios Administrativos mención Informática, cursando 4to semestre de Ingeniería de Sistemas y músico mixto. Puedes escuchar mi material en <a href="http://soundcloud.com/anyelo-petit/">este enlace</a>. Pasantías escolares realizadas en PDVSA: sede Cardón, en el área de Telecomunicaciones e Informática.</p>
+            <% end %>
+            
+        </div>
+      </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="content-section text-center">
+      <div class="download-section">
+        <div class="container">
+          <div class="col-lg-8 col-lg-offset-2">
+            <h2>Descargar Currículum</h2>
+            <p>Puedes descargar este currículum digital en el siguiente enlace: </p>
+            <%= link_to 'Descargar', welcome_download_pdf_url, class:"btn btn-default btn-lg" %>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container content-section text-center">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <h2>Contáctame</h2>
+          <p>¡Siéntete libre de enviar tus comentarios, sugerencias o un simple "hola"!</p>
+          <p><a href="mailto:<%= @user.email  %>"><%= @user.email %></a></p>
+          <ul class="list-inline banner-social-buttons">
+            <li class="social-btn">
+              <a href="https://twitter.com/<%= @user.twuser %>" class="twitter btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+            </li>
+            <li class="social-btn">
+              <a href="https://github.com/<%= @user.ghuser %>" class="github btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+            </li>
+            <li class="social-btn">
+              <a href="https://plus.google.com/<%= @user.guser %>" class="google btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+</div>
